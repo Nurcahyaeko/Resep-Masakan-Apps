@@ -1,5 +1,6 @@
 package com.apps.aplikasiresepmasakan.view;
 
+import android.app.Dialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.apps.aplikasiresepmasakan.R;
 import com.apps.aplikasiresepmasakan.view.About.AboutFragment;
@@ -87,14 +91,42 @@ public class Main2Activity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+
+
+
+            final Dialog dialog = new Dialog(Main2Activity.this);
+            dialog.setContentView(R.layout.custom_dialog_about);
+            dialog.setTitle("");
+
+            TextView text = (TextView) dialog.findViewById(R.id.tv_desc_about);
+            text.setText("");
+            ImageView image = (ImageView) dialog.findViewById(R.id.iv_icon_about);
+            image.setImageResource(R.mipmap.ic_launcher);
+
+            Button dialogButton = (Button) dialog.findViewById(R.id.bt_ok_about);
+            /**
+             * Jika tombol diklik, tutup dialog
+             */
+            dialogButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
+
+
+
+
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -128,4 +160,6 @@ public class Main2Activity extends AppCompatActivity
                 .replace(R.id.frame_container, fragment)
                 .commit();
     }
+
+
 }
