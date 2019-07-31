@@ -8,73 +8,114 @@
     tools:context=".view.SemuaMenu.IsiSemuaActivity"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/img_back_semua"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_menu_manage"
-        />
-
-    <ImageView
-        android:id="@+id/img_isi_semua"
-        android:layout_marginTop="20dp"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card_view">
+        <ImageView
+            android:id="@+id/img_back_semua"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back"
+            />
+
+        <ImageView
+            android:id="@+id/img_isi_semua"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:paddingStart="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20dp"
-                android:text="Nama Makanan :"/>
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_view"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
 
             <TextView
+                android:paddingStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16dp"
+                android:text="\nNama Makanan :"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/txtNama_isi_semua"
-                android:paddingStart="20dp"
+                android:paddingStart="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
 
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="1dp"
+                android:background="#a40404"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
 
             <TextView
-                android:paddingStart="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="20dp"
-                android:text="Bahan Masakan:"/>
+                android:textSize="16dp"
+                android:text="Bahan Masakan :"/>
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/txtBahan_isi_semua"
-                android:paddingStart="20dp"
+                android:paddingStart="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""
-                android:textSize="20dp"/>
+                android:textSize="16dp"/>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="1dp"
+                android:background="#a40404"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
 
             <TextView
-                android:paddingStart="20dp"
+
+                android:paddingStart="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="20dp"
-                android:text="Cara Masak:"/>
+                android:textSize="16dp"
+                android:text="\nCara Masak : "/>
 
             <TextView
+
                 android:id="@+id/txtCaraMasak_isi_semua"
-                android:paddingStart="20dp"
+                android:paddingStart="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text=""
-                android:textSize="20dp"/>
+                android:text="\n"
+                android:textSize="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="\n"/>
         </LinearLayout>
     </ScrollView>
 

@@ -34,6 +34,8 @@ public class ResepMasakanViewHolder extends RecyclerView.ViewHolder {
         super(view);
         ButterKnife.bind(this,view);
     }
+
+
     public  void setItem(List<ResultResep> item){
         resultResepList = item;
     }

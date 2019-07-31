@@ -39,6 +39,7 @@ public class ResepMasakanAdapter extends RecyclerView.Adapter<ResepMasakanViewHo
         ResultResep resultResep=resultResepList.get(i);
         resepMasakanViewHolder.namaSemua.setText(resultResep.getNama_masakan());
         resepMasakanViewHolder.jenisSemua.setText(resultResep.getJenis_makanan());
+
         Glide.with(context)
                 .load("https://kostlab.id/project/eko/xfile/gambar_makanan/"+resultResep.getGambar_masakan())
                 .apply(new RequestOptions().override(100,100).centerCrop())

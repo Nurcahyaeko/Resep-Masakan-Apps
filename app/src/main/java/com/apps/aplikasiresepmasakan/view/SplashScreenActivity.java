@@ -16,7 +16,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private ImageView gambarSplash;
 
-    private final int delaay_Splash = 2500;
+    private final int delaay_Splash = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), IntroActivity.class));
                 finish();
             }
-        }, 4*1000);
+        }, 4*240);
 
 
     }
