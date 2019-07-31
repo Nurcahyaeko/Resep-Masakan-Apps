@@ -45,8 +45,6 @@ public class SemuaMenuFragment extends Fragment {
 
         if(cari == null){
             call=service.getsemuadata();
-
-            Toast.makeText(getActivity().getApplicationContext(),"Masukan Data",Toast.LENGTH_LONG).show();
         } else{
             call=service.getdataByNama(cari);
         }

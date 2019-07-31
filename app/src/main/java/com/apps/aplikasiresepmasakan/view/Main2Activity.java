@@ -22,15 +22,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.apps.aplikasiresepmasakan.R;
-import com.apps.aplikasiresepmasakan.view.About.AboutFragment;
 
 import com.apps.aplikasiresepmasakan.view.MakananBerat.MakananBeratFragment;
 import com.apps.aplikasiresepmasakan.view.MakananRingan.MakananRinganFragment;
 import com.apps.aplikasiresepmasakan.view.SemuaMenu.SemuaMenuFragment;
 
 
-public class Main2Activity extends AppCompatActivity
-        implements OnNavigationItemSelectedListener {
+public class Main2Activity extends AppCompatActivity implements OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
     DrawerLayout drawer;
@@ -44,14 +42,6 @@ public class Main2Activity extends AppCompatActivity
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = findViewById(R.id.semua_search);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -141,13 +131,6 @@ public class Main2Activity extends AppCompatActivity
         } else if (id == R.id.nav_makanan_ringan) {
             fragment = new MakananRinganFragment();
             callFragment(fragment);
-        } else if (id == R.id.nav_about) {
-            fragment = new AboutFragment();
-            callFragment(fragment);
-
-        } else if (id == R.id.nav_exit) {
-            finish();
-            System.exit(0);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

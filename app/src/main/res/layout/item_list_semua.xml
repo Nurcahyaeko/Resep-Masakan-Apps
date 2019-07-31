@@ -75,7 +75,7 @@
                         <TextView
                             android:layout_width="140dp"
                             android:layout_height="wrap_content"
-                            android:text="Jenis Makanan"
+                            android:text="Jenis Makanan :"
                             android:textSize="17sp"
                             android:textStyle="bold" />
 

@@ -42,9 +42,6 @@ public class ResepMasakanViewHolder extends RecyclerView.ViewHolder {
     @OnClick()
     void click(@NonNull View itemView){
         int position = getAdapterPosition();
-        //String nama = resultResepList.get(position).getNama_masakan();
-        //Toast.makeText(view.getContext(),nama,Toast.LENGTH_LONG).show();
-        ///////////////////////////////////////////////////////////////////
         String gambar = resultResepList.get(position).getGambar_masakan();
         String nama_masakan = resultResepList.get(position).getNama_masakan();
         String resep_masakan = resultResepList.get(position).getResep_masakan();
@@ -57,9 +54,6 @@ public class ResepMasakanViewHolder extends RecyclerView.ViewHolder {
         intent.putExtra("resep_masakan", resep_masakan);
         intent.putExtra("cara_masak", cara_masak);
         itemView.getContext().startActivity(intent);
-        ///////////////////////////////////////////////////////////////////
-
-
 
     }
 

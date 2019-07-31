@@ -46,7 +46,7 @@ public class MakananBeratFragment extends Fragment {
         call.enqueue(new Callback<ResepModels>() {
             @Override
             public void onResponse(Call<ResepModels> call, Response<ResepModels> response) {
-                Toast.makeText(getActivity().getApplicationContext(),"total ="+response.body().getTotal_result(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getActivity().getApplicationContext(),"total ="+response.body().getTotal_result(), Toast.LENGTH_LONG).show();
                 LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
                 recyclerView.setLayoutManager(linearLayoutManager);
                 recyclerView.setHasFixedSize(true);
