@@ -54,9 +54,6 @@ public class IsiSemuaActivity extends AppCompatActivity {
                 .apply(new RequestOptions().override(100,100).centerCrop())
                 .into(gambarx);
         ////////////////////////////////////////////////////////////////////
-
-
-
     }
 //        @OnClick(R.id.img_back_semua)
 //        public void back() {
@@ -64,20 +61,21 @@ public class IsiSemuaActivity extends AppCompatActivity {
 //            startActivity(in);
 //        }
 
-
-
-
-
-
-
-
-
     @OnClick(R.id.img_back_semua)
-    public void back() {
-        fragment = new MakananBeratFragment();
-        callFragment(fragment);
+    public void back(){
+        Intent in = new Intent(IsiSemuaActivity.this, Main2Activity.class);
+        in.putExtra("source", "detail");
+        startActivity(in);
 
     }
+
+
+//    @OnClick(R.id.img_back_semua)
+//    public void back() {
+//        fragment = new MakananBeratFragment();
+//        callFragment(fragment);
+//
+//    }
 
     private void callFragment(Fragment fragment) {
         fragmentManager = getFragmentManager();
